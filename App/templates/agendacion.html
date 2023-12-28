@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://unac.edu.pe/wp-content/uploads/2023/02/cropped-Logo_UNAC_Encabezado_icon-32x32.png">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles_agendacion.css')}}">
+    <title>Centro de Salud</title>
+</head>
+
+<body>
+    <div class="form-container sign-up">
+        <form action="{{url_for('agendar_cita')}}" method="POST">
+            <h1>Agendación de Cita<br><br></h1>
+            <h2>Ingrese sus datos<br><br></h2>
+            <span>Nombres y Apellidos</span>
+            <input type="text" name="nombres" placeholder="Nombres y Apellidos" required>
+            <span>Edad</span>
+            <input type="text" name="edad" placeholder="Edad" required>
+            <span>Codigo de Estudiante</span>
+            <input type="text" name="codigo" placeholder="Código de Estudiante" required>
+            <span>Fecha</span>
+            <input type="date" id="fecha" name="fecha" required>
+            <button>enviar</button>
+            <a href="{{url_for('principal')}}">Volver</a>
+        </form>
+    </div>
+</body>
+
+</html>

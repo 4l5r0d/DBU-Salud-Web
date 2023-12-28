@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <link rel="icon" href="https://unac.edu.pe/wp-content/uploads/2023/02/cropped-Logo_UNAC_Encabezado_icon-32x32.png">
+        <title>Centro de Salud</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles_principal.css')}}">
+        <style>
+            .nav {
+                float: left;
+            }
+        
+            .content {
+                margin-left: 250px;
+                /* Ajusta según el ancho de tu menú */
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="nav">
+            <ul class = "list">
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="{{url_for('static', filename='assets/menu.svg')}}" class="list__img"> <!-- alt=""  debria ir-->
+                        <a href="#" class="nav__link" data-menu-item-id="inicio">Inicio</a>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button list__button--click">
+                        <img src="{{url_for('static', filename='assets/especialidad.svg')}}" class="list__img">
+                        <a href="#" class="nav__link" data-menu-item-id="inicio">Servicios</a>
+                        <img src="{{url_for('static', filename='assets/list.svg')}}" class="list__arrow">
+                    </div>
+                    <ul class="list__show">
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-menu-item-id="medicina">Servicio de Medicina</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-menu-item-id="odontologia">Servicio de Odontologia</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-menu-item-id="psico">Servicio de Psicologia y Psicopedagogía</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-menu-item-id="laboratorio">Servicio de Laboratorio</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="{{url_for('static', filename='assets/calendarplus.svg')}}" class="list__img"> <!-- alt=""  debria ir-->
+                        <a href="#" class="nav__link" data-menu-item-id="campanas">Campañas</a>
+                    </div>
+                </li>
+
+                <li class="list__item list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="{{url_for('static', filename='assets/userdetail.svg')}}" class="list__img">
+                        <a href="#" class="nav__link" data-menu-item-id="inicio">Nosotros</a>
+                        <img src="{{url_for('static', filename='assets/list.svg')}}" class="list__arrow">
+                    </div>
+                    <ul class="list__show">
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-menu-item-id="objetivos">Objetivos</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-menu-item-id="funciones">Funciones Generales</a>
+                        </li>
+                        <li class="list__inside">
+                            <a href="#" class="nav__link nav__link--inside" data-menu-item-id="unidad">Unidad Central</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="{{url_for('static', filename='assets/phonecall.svg')}}" class="list__img"> <!-- alt=""  debria ir-->
+                        <a href="#" class="nav__link" data-menu-item-id="contacto">Contacto</a>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="{{url_for('static', filename='assets/exit.svg')}}" class="list__img"> <!-- alt=""  debria ir-->
+                        <a href="{{url_for('login')}}" class="nav__link">Salir</a>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="content" id="contenido">
+            <!-- Contenido se cargará dinámicamente aquí -->
+        </div>
+
+        <script src="{{url_for('static', filename='js/script_principal.js')}}"></script>
+    </body>
+</html>

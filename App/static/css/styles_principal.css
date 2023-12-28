@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #276caa;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1619252584172-a83a949b6efd?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center center;
+    background-size: cover;
+}
+
+
+.nav {
+    width: 300px; /*Elemento nav del lado izquierdo*/
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+}
+
+.nav__link{
+    color: #303440;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none; /*Elimina la lineas del texto___*/
+}
+
+.nav__link--inside{ 
+    border-radius: 6px;
+    padding-left: 20px;
+    transition: all .3s ease-in-out;   
+    text-align: left;
+}
+
+.nav__link--inside:hover {
+    background: #95caff; /*#f6f8fa color original ceniza blanca*/
+}
+
+.list { /*hijo del elemento nav*/
+    width: 100%;  /*Esto quiere decir que esta lista hijo ocupara el 100% de su padre*/
+    height: 100vh; /*ocupa el 100% del area del navegador*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /*Esto centrara verticalmente a los elementos*/
+    /* border-radius: 0 16px 16px 0; */ /*Esto es el borde de la parte derecha superior e inferior*/
+    background:#ffffff;
+}
+
+.list__item { /*este elemento es el hijo directo del ul en html*/
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+
+.lis__item click { /*aqui van los subelementos que tengan una lista dentro*/
+    cursor: pointer;
+}
+
+.list__button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.arrow .list__arrow{ /*este es su hijo de (list.arrow") donde se rotara la flecha*/
+    transform: rotate(90deg);
+}
+
+.list__arrow {
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.list__show{ /*esto es para limitar a los subtemas, no borrar*/
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #141010;
+    list-style:none;
+    transition: height .4s;
+    height: 0;
+}

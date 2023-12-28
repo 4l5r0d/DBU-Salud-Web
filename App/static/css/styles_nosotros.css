@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    margin: 50px;
+    width: 1000px;
+    height: 300px;
+    border-radius: 10px;
+    /* Añade bordes redondeados */
+    transition: transform 0.3s ease;
+    /* Añade transición para el efecto de agrandar */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container img:hover {
+    transform: scale(1.1);
+    /* Agrandar la imagen al pasar el puntero */
+}
+
+/* Añade estilos para la franja y el texto "SALUD PARA TODOS" */
+.franja {
+    background-color: #276caa;
+    /* Color de fondo rojo */
+    width: 101.6%;
+    /*TAMAÑO DE FRANJA */
+    position: relative;
+    /* Posiciona la franja detrás del menú desplegable */
+    z-index: -1;
+    /* Asegura que la franja esté detrás del menú desplegable */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Añade sombreado a la franja */
+    margin-bottom: 20px;
+    /* Añade margen en la parte inferior para separar la franja de las imágenes */
+}
+
+.franja h1 {
+    color: white;
+    /* Color de texto blanco */
+    text-align: center;
+    /* Centra el texto */
+    padding: 10px 0;
+    /* Añade espacio interno para separar el texto de los bordes de la franja */
+}
+
+.subtitulo {
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    /* Agrega fondo blanco al contenedor de texto */
+    border-radius: 10px;
+    /* Bordes redondeados para el contenedor de texto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera al contenedor */
+}
+
+.subtitulo h2 {
+    color: #276caa;
+    text-align: center;
+    padding: 10px;
+}
+
+.cuerpo {
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    /* Agrega fondo blanco al contenedor de texto */
+    padding: 20px;
+    /* Añade espacio interno al contenedor de texto */
+    border-radius: 10px;
+    /* Bordes redondeados para el contenedor de texto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera al contenedor */
+}
